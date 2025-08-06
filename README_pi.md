@@ -15,10 +15,10 @@
 라즈베리파이에서 터미널을 열고 다음 **한 줄**만 실행하세요:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/piGPT/setup_pi.sh | bash
+curl -sSL https://raw.githubusercontent.com/damagethundercat/nanoGPTpi/main/setup_pi.sh | bash
 ```
 
-> ⚠️ **중요**: 위 명령어는 GitHub에 업로드 후 실제 저장소 URL로 수정해서 사용하세요.
+> ✅ **준비 완료**: 위 명령어를 라즈베리파이에서 바로 사용하세요!
 
 ---
 
@@ -37,8 +37,8 @@ sudo apt install -y python3.11 python3.11-venv python3.11-dev \
 ### 2️⃣ piGPT 다운로드
 ```bash
 cd ~
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO/piGPT
+git clone https://github.com/damagethundercat/nanoGPTpi.git
+cd nanoGPTpi
 ```
 
 ### 3️⃣ Python 3.11 가상환경 생성
@@ -74,9 +74,9 @@ pip install --prefer-binary -r requirements_pi.txt
 ```bash
 # 원본 nanoGPT에서 복사하거나 별도 다운로드 필요
 # 예시 (Windows에서 라즈베리파이로):
-scp user@your-pc:/path/to/nanoGPT/out-*/ckpt.pt ~/YOUR_REPO/piGPT/models/
-scp user@your-pc:/path/to/nanoGPT/data/*/meta.pkl ~/YOUR_REPO/piGPT/models/
-scp user@your-pc:/path/to/nanoGPT/data/*/*.model ~/YOUR_REPO/piGPT/models/
+scp user@your-pc:/path/to/nanoGPT/out-*/ckpt.pt ~/nanoGPTpi/models/
+scp user@your-pc:/path/to/nanoGPT/data/*/meta.pkl ~/nanoGPTpi/models/
+scp user@your-pc:/path/to/nanoGPT/data/*/*.model ~/nanoGPTpi/models/
 ```
 
 ---
@@ -101,7 +101,7 @@ export GEMINI_API_KEY="your_actual_api_key"
 
 ### 1️⃣ piGPT 실행
 ```bash
-cd ~/YOUR_REPO/piGPT
+cd ~/nanoGPTpi
 source venv_pigpt/bin/activate
 python run_echoes_workflow.py
 ```
@@ -175,7 +175,7 @@ chmod 644 models/*
 GitHub에서 최신 버전으로 업데이트:
 
 ```bash
-cd ~/YOUR_REPO/piGPT
+cd ~/nanoGPTpi
 git pull origin main
 source venv_pigpt/bin/activate
 pip install --prefer-binary -r requirements_pi.txt
