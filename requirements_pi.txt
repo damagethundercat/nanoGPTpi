@@ -1,0 +1,11 @@
+# piGPT 전용 최소 의존성 (라즈베리파이 64-bit OS 기준)
+# torch 공식 휠 URL은 버전·Python·아키텍처에 따라 상이하므로 설치 스크립트에서 자동 선택 권장.
+# 예: pip install torch==2.2.1+cpu -f https://download.pytorch.org/whl/cpu/torch_stable.html
+
+torch
+sentencepiece
+tiktoken
+numpy<2.0
+tqdm
+# Gemini API
+google-generativeai
